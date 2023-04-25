@@ -1,0 +1,17 @@
+{
+  "name": "prisma-leak",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "prisma migrate dev && prisma generate && chmod +x ./run-with-version.sh",
+    "showcase": "echo 'Good memory management: ' && ./run-with-version.sh 3.8 && echo '\n\nBad memory management: ' && ./run-with-version.sh 3.9",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "3.9",
+    "prisma": "3.9"
+  }
+}
